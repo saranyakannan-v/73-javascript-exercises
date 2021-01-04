@@ -10,23 +10,23 @@
 // You will have time to focus on it later.
 //Ask three questions to the user: his/her Age, Gender, and the Town where he/she lives. Display the collected responses in a dialog box and ask to confirm. If not confirmed, re-run the process
 
-(function() {
-    let press;
-    let userDetails: {
-        userAge = prompt("Please enter your age : ");
-        userGender = prompt("Please enter your gender (Male / Female): ");
-        userTown = prompt("Please enter your town : ");
-    }
+(function user() {
+
+    let userAge = prompt("Please enter your age : ");
+    let userGender = prompt("Please enter your gender (Male / Female): ");
+    let userTown = prompt("Please enter your town : ");
+
     alert(
         "Details of the User :" + " " +
         "Age :" + " " + userAge + " " +
         "Gender :" + " " + userGender + " " +
         "Town :" + " " + userTown
     );
-    if (confirm("Please Confirm the details.")) {
-        press = "You pressed OK!";
+    let details = confirm("Please Confirm the details.");
+    if (details == true) {
+        alert("You pressed OK!");
     } else {
-        press = "You pressed Cancel! and re-run the process";
+        return user()
     }
 
 })();
